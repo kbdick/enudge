@@ -1,0 +1,53 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>
+      Welcome to {{ title }}!
+      </h1>
+      <p>
+        eNudge will tell you when you should be turning off energy use to be most environmentally friendly.
+      </p>
+      <h2>
+      Your current stats are:
+      </h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <table class="table">
+        <thead class="dark">
+          <tr>
+            <th scope="col">
+              Price
+            </th>
+            <th scope="col">
+              Carbon
+            </th>
+            <th scope="col">
+              Solar
+            </th>
+            <th scope="col">
+              Consumption
+            </th>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="price" *ngFor="let prices of prices | async">
+              {{prices.price | currency}}
+            </td>
+            <td *ngFor="let carbons of carbons | async">
+              {{carbons.carbon}}
+            </td>
+            <td *ngFor="let solars of solars | async">
+              {{solars.generation}}
+            </td>
+            <td *ngFor="let uses of uses | async">
+              {{uses.consumption}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>  
+</div>

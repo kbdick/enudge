@@ -19,12 +19,12 @@ export interface Uses {
 }
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.scss']
 })
 
-export class AppComponent implements OnInit {
+export class DashboardComponent implements OnInit {
   title = 'eNudge';
 
   pricesCol: AngularFirestoreCollection<Prices>;
@@ -49,4 +49,5 @@ export class AppComponent implements OnInit {
   
   ngOnInit() {
   }
+
 }

@@ -1,0 +1,24 @@
+[debug] [2018-09-13T19:44:06.855Z] ----------------------------------------------------------------------
+[debug] [2018-09-13T19:44:06.858Z] Command:       /home/ubuntu/.nvm/versions/node/v10.10.0/bin/node /home/ubuntu/.nvm/versions/node/v10.10.0/bin/firebase serve
+[debug] [2018-09-13T19:44:06.858Z] CLI Version:   4.2.1
+[debug] [2018-09-13T19:44:06.859Z] Platform:      linux
+[debug] [2018-09-13T19:44:06.859Z] Node Version:  v10.10.0
+[debug] [2018-09-13T19:44:06.866Z] Time:          Thu Sep 13 2018 19:44:06 GMT+0000 (Coordinated Universal Time)
+[debug] [2018-09-13T19:44:06.866Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-09-13T19:44:06.878Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-09-13T19:44:06.878Z] > authorizing via signed-in user
+[debug] [2018-09-13T19:44:06.881Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/enudge-85fea  
+ 
+[debug] [2018-09-13T19:44:07.038Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-13T19:44:07.040Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/enudge-85fea  
+ 
+[debug] [2018-09-13T19:44:07.111Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/ubuntu/workspace/enudge'...
+[info] 
+[debug] [2018-09-13T19:44:07.114Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/446417700762/clients/_:getWebAppConfig  
+ 
+[debug] [2018-09-13T19:44:07.187Z] <<< HTTP RESPONSE 200
+[info] i  hosting[enudge-85fea]: Serving hosting files from: public
+[info] ✔  hosting[enudge-85fea]: Local server: http://localhost:5000

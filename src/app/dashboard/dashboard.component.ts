@@ -4,18 +4,19 @@ import { Observable } from 'rxjs/Observable';
 
 export interface Prices {
   price: number;
-}
-
+},
 export interface Carbons {
-  carbon: number;
-}
-
+  percent: number;
+},
 export interface Solars {
   generation: number;
-}
-
+},
 export interface Uses {
   consumption: number;
+  demand: number;
+},
+export interface Users {
+  address1: string;
 }
 
 @Component({
@@ -35,16 +36,39 @@ export class DashboardComponent implements OnInit {
   solars: Observable<Solars[]>;
   usesCol: AngularFirestoreCollection<Uses>;
   uses: Observable<Uses[]>;
+  usersCol: AngularFirestoreCollection<Users>;
+  users: Observable<Users[]>;
 
   constructor(private afs: AngularFirestore) { 
-  this.pricesCol = this.afs.collection('prices');
+  // timestamp in milliseconds
+  const currentTime = new Date().getTime();
+  
+  this.pricesCol = this.afs.collection<'prices'>('prices', ref => {
+    return ref
+             .limit(1)
+      });
   this.prices = this.pricesCol.valueChanges();
-  this.carbonsCol = this.afs.collection('carbons');
+  
+  this.carbonsCol = this.afs.collection<'carbons'>('carbons', ref => {
+    return ref
+             .limit(1)
+      });
   this.carbons = this.carbonsCol.valueChanges();
-  this.solarsCol = this.afs.collection('solars');
+  
+  this.solarsCol = this.afs.collection<'solars'>('solars', ref => {
+    return ref
+             .limit(1)
+      });
   this.solars = this.solarsCol.valueChanges();
-  this.usesCol = this.afs.collection('uses');
+  
+  this.usesCol = this.afs.collection<'uses'>('uses', ref => {
+    return ref
+             .limit(1)
+      });
   this.uses = this.usesCol.valueChanges();
+  
+  this.usersCol = this.afs.collection('users');
+  this.users = this.usersCol.valueChanges();
   }
   
   ngOnInit() {

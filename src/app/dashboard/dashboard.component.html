@@ -8,8 +8,8 @@
       <p>
         eNudge will tell you when you should be turning off energy use to be most environmentally friendly.
       </p>
-      <h2>
-      Your current stats are:
+      <h2 *ngFor="let users of users | async">
+      Your current stats at {{users.address1}} are:
       </h2>
     </div>
   </div>
@@ -33,19 +33,33 @@
         </thead>
         <tbody>
           <tr>
-            <td class="price" *ngFor="let prices of prices | async">
-              {{prices.price | currency}}
+            <td *ngFor="let prices of prices | async">
+              {{prices.price * 0.01 | currency}}
             </td>
             <td *ngFor="let carbons of carbons | async">
-              {{carbons.carbon}}
+              {{carbons.percent / 100 | percent}}
             </td>
             <td *ngFor="let solars of solars | async">
-              {{solars.generation}}
+              {{solars.generation / 1000}} kW
             </td>
             <td *ngFor="let uses of uses | async">
-              {{uses.consumption}}
+              {{uses.demand / 10000000000 | number}} kW
             </td>
           </tr>
+          <tr>
+          <td *ngFor="let carbons of carbons | async">
+            Current hourly price in the {{carbons.ba}} ComEd node.
+          </td>
+          <td *ngFor="let carbons of carbons | async">
+            Current % of fossil fuel generation in the {{carbons.ba}} ISO.
+          </td>
+          <td *ngFor="let users of users | async">
+             Current solar generation at {{users.address1}}.
+           </td>
+           <td *ngFor="let users of users | async">
+             Current consumption at {{users.address1}}.
+           </td>
+          <tr>
         </tbody>
       </table>
     </div>

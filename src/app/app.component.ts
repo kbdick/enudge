@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 
+
 export interface Prices {
   price: number;
 }
 
 export interface Carbons {
-  carbon: number;
+  percent: number;
 }
 
 export interface Solars {
@@ -16,6 +17,11 @@ export interface Solars {
 
 export interface Uses {
   consumption: number;
+  demand: number;
+}
+
+export interface Users {
+  address1: string;
 }
 
 @Component({
@@ -25,7 +31,7 @@ export interface Uses {
 })
 
 export class AppComponent implements OnInit {
-  title = 'eNudge';
+title = 'eNudge';
 
   pricesCol: AngularFirestoreCollection<Prices>;
   prices: Observable<Prices[]>;
@@ -35,6 +41,8 @@ export class AppComponent implements OnInit {
   solars: Observable<Solars[]>;
   usesCol: AngularFirestoreCollection<Uses>;
   uses: Observable<Uses[]>;
+  usersCol: AngularFirestoreCollection<Users>;
+  users: Observable<Users[]>;
 
   constructor(private afs: AngularFirestore) { 
   this.pricesCol = this.afs.collection('prices');
@@ -45,8 +53,11 @@ export class AppComponent implements OnInit {
   this.solars = this.solarsCol.valueChanges();
   this.usesCol = this.afs.collection('uses');
   this.uses = this.usesCol.valueChanges();
+  this.usersCol = this.afs.collection('users');
+  this.users = this.usersCol.valueChanges();
   }
   
   ngOnInit() {
   }
+
 }

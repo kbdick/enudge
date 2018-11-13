@@ -2,13 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { AngularFireModule } from 'angularfire2';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 export const firebaseConfig = environment.firebaseConfig;
 
-import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { UserComponent } from './auth/user/user.component';
@@ -21,7 +20,6 @@ import { FormBuilder, FormControl, FormGroup, Validators, FormsModule, ReactiveF
 
 @NgModule({
   declarations: [
-    AppComponent,
     LoginComponent,
     RegisterComponent,
     UserComponent,
@@ -38,7 +36,7 @@ import { FormBuilder, FormControl, FormGroup, Validators, FormsModule, ReactiveF
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ DashboardComponent ]
 })
 
 export class AppModule { }

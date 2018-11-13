@@ -1,26 +1,30 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Observable } from 'rxjs/Observable';
 
 export interface Prices {
   price: number;
-},
+}
+
 export interface Carbons {
   percent: number;
-},
+}
+
 export interface Solars {
   generation: number;
-},
+}
+
 export interface Uses {
   consumption: number;
   demand: number;
-},
+}
+
 export interface Users {
   address1: string;
 }
 
 @Component({
-  selector: 'app-dashboard',
+  selector: 'app-root',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
@@ -43,25 +47,25 @@ export class DashboardComponent implements OnInit {
   // timestamp in milliseconds
   const currentTime = new Date().getTime();
   
-  this.pricesCol = this.afs.collection<'prices'>('prices', ref => {
+  this.pricesCol = this.afs.collection('prices', ref => {
     return ref
              .limit(1)
       });
   this.prices = this.pricesCol.valueChanges();
   
-  this.carbonsCol = this.afs.collection<'carbons'>('carbons', ref => {
+  this.carbonsCol = this.afs.collection('carbons', ref => {
     return ref
              .limit(1)
       });
   this.carbons = this.carbonsCol.valueChanges();
   
-  this.solarsCol = this.afs.collection<'solars'>('solars', ref => {
+  this.solarsCol = this.afs.collection('solars', ref => {
     return ref
              .limit(1)
       });
   this.solars = this.solarsCol.valueChanges();
   
-  this.usesCol = this.afs.collection<'uses'>('uses', ref => {
+  this.usesCol = this.afs.collection('uses', ref => {
     return ref
              .limit(1)
       });

@@ -1,6 +1,8 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 /environments
 /secrets
+/e2e
+/public
 
 # compiled output
 /dist
@@ -19,6 +21,11 @@
 *.launch
 .settings/
 *.sublime-workspace
+.editorconfig
+.firebaserc
+.gitignore
+firebase-debug.log
+
 
 # IDE - VSCode
 .vscode/*

@@ -57,7 +57,7 @@
              Current solar generation at {{users.address1}}.
            </td>
            <td *ngFor="let users of users | async">
-             Current consumption at {{users.address1}}.
+             Current consumption net of generation at {{users.address1}}.
            </td>
           <tr>
         </tbody>

@@ -49,25 +49,29 @@ export class DashboardComponent implements OnInit {
   
   this.pricesCol = this.afs.collection('prices', ref => {
     return ref
-             .limit(1)
+            .orderBy('timestamp', 'desc')
+            .limit(1)
       });
   this.prices = this.pricesCol.valueChanges();
   
   this.carbonsCol = this.afs.collection('carbons', ref => {
     return ref
-             .limit(1)
+            .orderBy('validUntil', 'desc')
+            .limit(1)
       });
   this.carbons = this.carbonsCol.valueChanges();
   
   this.solarsCol = this.afs.collection('solars', ref => {
     return ref
-             .limit(1)
+            .orderBy('timestamp', 'desc')
+            .limit(1)
       });
   this.solars = this.solarsCol.valueChanges();
   
   this.usesCol = this.afs.collection('uses', ref => {
     return ref
-             .limit(1)
+            .orderBy('timestamp', 'desc')
+            .limit(1)
       });
   this.uses = this.usesCol.valueChanges();
   

@@ -40,10 +40,10 @@
               {{carbons.percent / 100 | percent}}
             </td>
             <td *ngFor="let solars of solars | async" [ngStyle]="{'color': setGenerationColor(solars.generation)}">
-              {{solars.generation / 1000}} kW
+              {{solars.generation / 1000 | number : '1.2-2'}} kW
             </td>
             <td *ngFor="let uses of uses | async" [ngStyle]="{'color': setDemandColor(uses.demand)}">
-              {{uses.demand / 10000000000 | number}} kW
+              {{uses.demand / 1000 | number : '1.2-2'}} kW
             </td>
           </tr>
           <tr>

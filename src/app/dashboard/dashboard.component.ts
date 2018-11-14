@@ -4,19 +4,24 @@ import { Observable } from 'rxjs/Observable';
 
 export interface Prices {
   price: number;
+  timestamp: number;
 }
 
 export interface Carbons {
+  ba: string;
   percent: number;
+  rating: number;
+  switch: number;
 }
 
 export interface Solars {
   generation: number;
+  timestamp: number;
 }
 
 export interface Uses {
-  consumption: number;
-  demand: number;
+  demand: string;
+  timestamp: string;
 }
 
 export interface Users {
@@ -108,7 +113,7 @@ export class DashboardComponent implements OnInit {
   setGenerationColor(generation) {
     switch (true) {
       case generation < 0:
-        return 'red';
+        return 'gray';
       case generation <= 500 && generation < 1750:
         return 'orange';
       case generation <= 1075:
@@ -118,13 +123,13 @@ export class DashboardComponent implements OnInit {
     }
   }
   
-    setDemandColor(demand, generation) {
+  setDemandColor(demand, generation) {
     switch (true) {
-      case demand < generation:
+      case (parseInt(demand) / 1000) > generation:
         return 'red';
-      case demand <= generation && demand < 0:
+      case (parseInt(demand) / 1000) >= generation && (parseInt(demand) / 1000) > 0:
         return 'orange';
-      case demand <= 0:
+      case (parseInt(demand) / 1000) <= generation:
         return 'green';
       case demand != null:
         return 'gray';
@@ -133,5 +138,5 @@ export class DashboardComponent implements OnInit {
   
   ngOnInit() {
   }
-
 }
+

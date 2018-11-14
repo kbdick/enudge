@@ -6,6 +6,7 @@
 /dist
 /tmp
 /out-tsc
+/enudge
 
 # dependencies
 /node_modules

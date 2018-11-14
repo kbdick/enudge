@@ -78,6 +78,58 @@ export class DashboardComponent implements OnInit {
   this.usersCol = this.afs.collection('users');
   this.users = this.usersCol.valueChanges();
   }
+
+  setPriceColor(price) {
+    switch (true) {
+      case price> 7:
+        return 'red';
+      case price > 3 && price <=7:
+        return 'orange';
+      case price <= 3:
+        return 'green';
+      case price != null:
+        return 'gray';
+    }
+  }
+  
+  setCarbonColor(percent) {
+    switch (true) {
+      case percent > .75:
+        return 'red';
+      case percent > .50 && percent <= .75:
+        return 'orange';
+      case percent <= .50:
+        return 'green';
+      case percent != null:
+        return 'gray';
+    }
+  }
+  
+  setGenerationColor(generation) {
+    switch (true) {
+      case generation < 0:
+        return 'red';
+      case generation <= 500 && generation < 1750:
+        return 'orange';
+      case generation <= 1075:
+        return 'green';
+      case generation != null:
+        return 'gray';
+    }
+  }
+  
+    setDemandColor(demand, generation) {
+    switch (true) {
+      case demand < generation:
+        return 'red';
+      case demand <= generation && demand < 0:
+        return 'orange';
+      case demand <= 0:
+        return 'green';
+      case demand != null:
+        return 'gray';
+    }
+  }
   
   ngOnInit() {
   }

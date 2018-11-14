@@ -19,30 +19,30 @@
         <thead class="dark">
           <tr>
             <th scope="col">
-              Price
+              Hourly Price
             </th>
             <th scope="col">
-              Carbon
+              Grid Fossil Fuel Footprint
             </th>
             <th scope="col">
-              Solar
+              Solar Generation
             </th>
             <th scope="col">
-              Consumption
+              Demand
             </th>
         </thead>
         <tbody>
           <tr>
-            <td *ngFor="let prices of prices | async">
+            <td *ngFor="let prices of prices | async" [ngStyle]="{'color': setPriceColor(prices.price)}">
               {{prices.price * 0.01 | currency}}
             </td>
-            <td *ngFor="let carbons of carbons | async">
+            <td *ngFor="let carbons of carbons | async" [ngStyle]="{'color': setCarbonColor(carbons.percent)}">
               {{carbons.percent / 100 | percent}}
             </td>
-            <td *ngFor="let solars of solars | async">
+            <td *ngFor="let solars of solars | async" [ngStyle]="{'color': setGenerationColor(solars.generation)}">
               {{solars.generation / 1000}} kW
             </td>
-            <td *ngFor="let uses of uses | async">
+            <td *ngFor="let uses of uses | async" [ngStyle]="{'color': setDemandColor(uses.demand)}">
               {{uses.demand / 10000000000 | number}} kW
             </td>
           </tr>
@@ -57,7 +57,7 @@
              Current solar generation at {{users.address1}}.
            </td>
            <td *ngFor="let users of users | async">
-             Current consumption net of generation at {{users.address1}}.
+             Current demand net of generation at {{users.address1}}.
            </td>
           <tr>
         </tbody>

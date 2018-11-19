@@ -29,14 +29,14 @@ export interface Users {
 }
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  selector: 'app-nudge',
+  templateUrl: './nudge.component.html',
+  styleUrls: ['./nudge.component.scss']
 })
 
-export class DashboardComponent implements OnInit {
+export class NudgeComponent implements OnInit {
 
-  pricesCol: AngularFirestoreCollection<Prices>;
+pricesCol: AngularFirestoreCollection<Prices>;
   prices: Observable<Prices[]>;
   carbonsCol: AngularFirestoreCollection<Carbons>;
   carbons: Observable<Carbons[]>;
@@ -82,60 +82,37 @@ export class DashboardComponent implements OnInit {
   this.usersCol = this.afs.collection('users');
   this.users = this.usersCol.valueChanges();
   }
-
-  setPriceColor(price) {
+  
+  setConsumeColor(price, percent, generation, demand) {
     switch (true) {
-      case price> 7:
+      case price > 3 || percent > 0.75 || generation < 500 || (parseInt(demand) / 1000) > generation:
         return 'red';
-      case price > 3 && price <=7:
+      case (price > 3 && price <=7) || (percent > .50 && percent <= .75) || (generation <= 500 && generation < 1750) || (parseInt(demand) / 1000) >= generation && (parseInt(demand) / 1000) > 0:
         return 'orange';
-      case price <= 3:
+      case price <= 3 || percent <= .50 || generation >= 1075 || (parseInt(demand) / 1000) <= generation:
         return 'green';
       case price != null:
         return 'gray';
     }
   }
-  
-  setCarbonColor(percent) {
+ 
+  isEnvironmental: boolean = true;
+ 
+ setConsumeBoolean(price, percent, generation, demand) {
     switch (true) {
-      case percent > .75:
-        return 'red';
-      case percent > .50 && percent <= .75:
-        return 'orange';
-      case percent <= .50:
-        return 'green';
-      case percent != null:
-        return 'gray';
+      case price > 3 || percent > 0.75 || generation < 500 || (parseInt(demand) / 1000) > generation:
+        return false;
+      case (price > 3 && price <=7) || (percent > .50 && percent <= .75) || (generation <= 500 && generation < 1750) || ((parseInt(demand) / 1000) >= generation && (parseInt(demand) / 1000) > 0):
+        return false;
+      case price <= 3 || percent <= .50 || generation >= 1075 || (parseInt(demand) / 1000) <= generation:
+        return true;
+      case price != null:
+        return false;
     }
-  }
+  };
   
-  setGenerationColor(generation) {
-    switch (true) {
-      case generation < 0:
-        return 'black';
-      case generation <= 500 && generation < 1750:
-        return 'orange';
-      case generation >= 1075:
-        return 'green';
-      case generation != null:
-        return 'gray';
-    }
-  }
-  
-  setDemandColor(demand, generation) {
-    switch (true) {
-      case (parseInt(demand) / 1000000000) > generation:
-        return 'red';
-      case (parseInt(demand) / 1000000000) >= generation && (parseInt(demand) / 1000000000) > 0:
-        return 'orange';
-      case (parseInt(demand) / 1000000000) <= generation:
-        return 'green';
-      case demand != null:
-        return 'gray';
-    }
-  }
-  
+ 
   ngOnInit() {
   }
-}
 
+}

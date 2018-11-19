@@ -1,18 +1,8 @@
 
 <div class="container">
-  <div class="row">
-    <div class="col">
-      <h1>
-      Welcome to {{ title }}!
-      </h1>
-      <p>
-        eNudge will tell you when you should be turning off energy use to be most environmentally friendly.
-      </p>
-      <h2 *ngFor="let users of users | async">
+  <h2 *ngFor="let users of users | async">
       Your current stats at {{users.address1}} are:
-      </h2>
-    </div>
-  </div>
+  </h2>
   <div class="row">
     <div class="col-12">
       <table class="table">
@@ -40,10 +30,10 @@
               {{carbons.percent / 100 | percent}}
             </td>
             <td *ngFor="let solars of solars | async" [ngStyle]="{'color': setGenerationColor(solars.generation)}">
-              {{solars.generation / 1000 | number : '1.2-2'}} kW
+              {{solars.generation | number : '1.0-2'}} W
             </td>
             <td *ngFor="let uses of uses | async" [ngStyle]="{'color': setDemandColor(uses.demand)}">
-              {{uses.demand / 1000 | number : '1.2-2'}} kW
+              {{uses.demand / 1000000000 | number : '1.0-2'}} W
             </td>
           </tr>
           <tr>

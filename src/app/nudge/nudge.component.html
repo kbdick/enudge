@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-4">
+  </div>
+  <div class="col-4">
+    <h2 *ngIf="isEnvironmental; else loading">
+        You can use electricity now. It's environmentally friendly.
+    </h2>
+      <ng-template #loading>
+        You should not use electricity now. It's not environmentally friendly.
+      </ng-template>
+  </div>
+  <div class="col-4">
+  </div>
+</div>

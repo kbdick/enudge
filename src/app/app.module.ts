@@ -12,11 +12,16 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { UserComponent } from './auth/user/user.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './404/page-not-found/page-not-found.component';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { MaterialModule } from './material/material.module';
 
 import { FormBuilder, FormControl, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AboutComponent } from './about/about.component';
+import { NudgeComponent } from './nudge/nudge.component';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +29,10 @@ import { FormBuilder, FormControl, FormGroup, Validators, FormsModule, ReactiveF
     RegisterComponent,
     UserComponent,
     DashboardComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AppComponent,
+    AboutComponent,
+    NudgeComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +44,7 @@ import { FormBuilder, FormControl, FormGroup, Validators, FormsModule, ReactiveF
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [ DashboardComponent ]
+  bootstrap: [ AppComponent ]
 })
 
 export class AppModule { }

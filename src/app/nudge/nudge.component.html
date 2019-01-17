@@ -1,12 +1,19 @@
 <div class="row">
   <div class="col-4">
   </div>
-  <div class="col-4">
-    <h2 *ngIf="isEnvironmental; else loading">
-        You can use electricity now. It's environmentally friendly.
-    </h2>
-      <ng-template #loading>
-        You should not use electricity now. It's not environmentally friendly.
+  <div class="col-4 m-4">
+     <div *ngIf="isEnvironmental | async; let isEnvironmental; else notEnvironmental">
+        <h1><i class="material-icons md-48 pr-2">thumb_up</i>Use Electricity</h1>
+        <div class="alert-success">
+          <h2 *ngFor="let carbons of carbons | async" class="p-4">You can use electricity now. It's environmentally friendly. The grid is using {{ carbons.percent / 100 | percent }} fossil fuel generation.</h2>
+        </div>
+    </div>
+      
+      <ng-template #notEnvironmental>
+        <h1><i class="material-icons md-48 pr-2">warning</i>Conserve Electricity</h1>
+        <div class="alert-danger">
+          <h2 *ngFor="let carbons of carbons | async" class="p-4">You should not use electricity now. It's not environmentally friendly. The grid is using {{ carbons.percent / 100 | percent }} fossil fuel generation.</h2>
+        </div>
       </ng-template>
   </div>
   <div class="col-4">

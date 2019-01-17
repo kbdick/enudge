@@ -1,8 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
-import { Observable } from 'rxjs/Observable';
-// import { FirestoreService } from '../services/firestore.service';
+import { Observable } from 'rxjs';
+import * as firebase from 'firebase/app';
 
+// remove these interfaces and replace with classe imports
+
+/*
 export interface Prices {
   price: number;
   timestamp: number;
@@ -28,15 +31,13 @@ export interface Uses {
 export interface Users {
   address1: string;
 }
-
-@Component({
-  selector: 'app-nudge',
-  templateUrl: './nudge.component.html',
-  styleUrls: ['./nudge.component.scss']
+*/
+@Injectable({
+  providedIn: 'root',
 })
 
-export class NudgeComponent implements OnInit {
-
+export class FirestoreService {
+/*
   pricesCol: AngularFirestoreCollection<Prices>;
   prices: Observable<Prices[]>;
   carbonsCol: AngularFirestoreCollection<Carbons>;
@@ -48,7 +49,7 @@ export class NudgeComponent implements OnInit {
   usersCol: AngularFirestoreCollection<Users>;
   users: Observable<Users[]>;
 
-  constructor(private afs: AngularFirestore) { 
+  constructor(private afs: AngularFirestore) { }
 
     this.pricesCol = this.afs.collection('prices', ref => {
       return ref
@@ -80,40 +81,5 @@ export class NudgeComponent implements OnInit {
     
     this.usersCol = this.afs.collection('users');
     this.users = this.usersCol.valueChanges();
-
-    let isEnvironmental: boolean = true;
-    let carbonCheck = 100;
-    let carbonSwitch = 81;
-      
-    let isEnvironmentalCheck: (carbonCheck: number, carbonSwitch: number) => boolean =
-      function (carbonCheck: number, carbonSwitch: number): boolean { return carbonCheck >= carbonSwitch; };
-      
-    isEnvironmental = isEnvironmentalCheck(carbonCheck, carbonSwitch);
-      
-    console.log(isEnvironmental);
-
-  }
-  
-  ngOnInit() {
-  }
+*/    
 }
-
-
-
-/*
-
-// A more complicated switch with price, etc.
-  let isEnvironmentalCheck: boolean = setConsumeBoolean(price, percent, generation, demand) {
-    switch (true) {
-      case price > 3 || percent > 0.75 || generation < 500 || (parseInt(demand) / 1000) > generation:
-        return false;
-      case (price > 3 && price <=7) || (percent > .50 && percent <= .75) || (generation <= 500 && generation < 1750) || ((parseInt(demand) / 1000) >= generation && (parseInt(demand) / 1000) > 0):
-        return false;
-      case price <= 3 || percent <= .50 || generation >= 1075 || (parseInt(demand) / 1000) <= generation:
-        return true;
-      case price != null:
-        return false;
-    }
-  };
-*/ 
-

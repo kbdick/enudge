@@ -21,7 +21,7 @@ import { MaterialModule } from './material/material.module';
 import { FormBuilder, FormControl, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AboutComponent } from './about/about.component';
 import { NudgeComponent } from './nudge/nudge.component';
-
+import { CarbonComponent } from './carbon/carbon.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,8 @@ import { NudgeComponent } from './nudge/nudge.component';
     PageNotFoundComponent,
     AppComponent,
     AboutComponent,
-    NudgeComponent
+    NudgeComponent,
+    CarbonComponent
   ],
   imports: [
     BrowserModule,

@@ -33,7 +33,7 @@
               {{solars.generation | number : '1.0-2'}} W
             </td>
             <td *ngFor="let uses of uses | async" [ngStyle]="{'color': setDemandColor(uses.demand)}">
-              {{uses.demand / 1000000000 | number : '1.0-2'}} W
+              {{uses.demand / 10000000000 | number : '1.0-2'}} W
             </td>
           </tr>
           <tr>

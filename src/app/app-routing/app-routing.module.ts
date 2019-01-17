@@ -9,6 +9,7 @@ import { PageNotFoundComponent } from '../404/page-not-found/page-not-found.comp
 import { AboutComponent } from '../about/about.component';
 import { AppComponent } from '../app.component';
 import { NudgeComponent } from '../nudge/nudge.component';
+import { CarbonComponent } from '../carbon/carbon.component';
 
 const routes: Routes = [
   { path: '', component: NudgeComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'user', component: UserComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'carbon', component: CarbonComponent },
   { path: '**', component: PageNotFoundComponent }
     ];
 

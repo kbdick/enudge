@@ -24,16 +24,16 @@
         <tbody>
           <tr>
             <td *ngFor="let prices of prices | async" [ngStyle]="{'color': setPriceColor(prices.price)}">
-              {{prices.price * 0.01 | currency}}
+              {{prices.price | currency}}
             </td>
             <td *ngFor="let carbons of carbons | async" [ngStyle]="{'color': setCarbonColor(carbons.percent)}">
-              {{carbons.percent / 100 | percent}}
+              {{carbons.percent | percent}}
             </td>
             <td *ngFor="let solars of solars | async" [ngStyle]="{'color': setGenerationColor(solars.generation)}">
               {{solars.generation | number : '1.0-2'}} W
             </td>
-            <td *ngFor="let uses of uses | async" [ngStyle]="{'color': setDemandColor(uses.demand)}">
-              {{uses.demand / 10000000000 | number : '1.0-2'}} W
+            <td *ngFor="let consumptions of consumptions | async" [ngStyle]="{'color': setDemandColor(consumptions.demand)}">
+              {{consumptions.demand | number : '1.0-2'}} W
             </td>
           </tr>
           <tr>
@@ -47,7 +47,7 @@
              Current solar generation at {{users.address1}}.
            </td>
            <td *ngFor="let users of users | async">
-             Current demand net of generation at {{users.address1}}.
+             Current demand at {{users.address1}}.
            </td>
           <tr>
         </tbody>

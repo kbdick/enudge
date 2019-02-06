@@ -1,37 +1,15 @@
-# Enudge
+## eNudge
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
+eNudge is a simple web app for helping the user be a more energy conscious consumer. It's designed to be accessible to a consumer with amateur developer skills.
 
-## Development server
+This project was generated with [Angular](https://angular.io). The backend is built in [Cloud Firestore](https://firebase.google.com). Data is pulled using [Zapier](https://zapier.com) and the following APIs.
+1. [Watttime](https://api.watttime.org) for up to 5 minute grid fossil fuel data for the PJM ISO.
+2. [ComEd Hourly Pricing](https://hourlypricing.comed.com) for up to 5 minute pricing data.
+3. [Enphase Enlighten](https://enlighten.enphaseenergy.com) for up to 5 minute solar generation output.
+4. [Rainforest Eagle](https://rainforestcloud.com) for up to 6 second electriciy demand.
 
-Run `npm start` for a dev server on Cloud9, or 'ng serve' on a development server of your choice. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Future Builds:
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project, or, if hosting on Github, ng build --prod --output-path dist --base-href "/enudge/". The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Host on Github Pages
-
-This requires installing the angular-cli-pages library locally. Here is a good tutorial for that: https://alligator.io/angular/deploying-angular-app-github-pages/
-Follow the instructions for your build above, then deploy with 'npx ngh'.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-## Export Firestore to Big Query
-Export first after setting up the SDK: https://cloud.google.com/firestore/docs/manage-data/export-import
-Command: gcloud beta firestore export gs://enudge-85fea.appspot.com/enudge/020619 --collection-ids=carbons,prices,solars,uses,users
-Status: gcloud beta firestore operations describe HASH
+1. Reports with [Data Studio](https://datastudio.google.com)
+2. Messaging alerts.
+3. PWA with push notifications.

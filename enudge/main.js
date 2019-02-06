@@ -41,7 +41,7 @@ module.exports = "<div class=\"row\">\n    <div class=\"col-4\">\n    </div>\n  
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwLzQwNC9wYWdlLW5vdC1mb3VuZC9wYWdlLW5vdC1mb3VuZC5jb21wb25lbnQuc2NzcyJ9 */"
 
 /***/ }),
 
@@ -104,7 +104,7 @@ module.exports = "<div class=\"row\">\n    <div class=\"col-3\">\n    </div>\n  
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Fib3V0L2Fib3V0LmNvbXBvbmVudC5zY3NzIn0= */"
 
 /***/ }),
 
@@ -239,7 +239,7 @@ module.exports = "<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJ9 */"
 
 /***/ }),
 
@@ -389,7 +389,7 @@ module.exports = "<!--\n<h1 class=\"header\">Login with Firebase or Social Provi
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".header {\n  text-align: center;\n  font-size: 30px;\n  margin-bottom: 40px; }\n\n.row {\n  margin-top: 10px; }\n\n.error {\n  color: red; }\n"
+module.exports = ".header {\n  text-align: center;\n  font-size: 30px;\n  margin-bottom: 40px; }\n\n.row {\n  margin-top: 10px; }\n\n.error {\n  color: red; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VidW50dS93b3Jrc3BhY2Uvc3JjL2FwcC9hdXRoL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usa0JBQWtCO0VBQ2xCLGVBQWU7RUFDZixtQkFBbUIsRUFBQTs7QUFHckI7RUFDRSxnQkFBZ0IsRUFBQTs7QUFHbEI7RUFDRSxVQUFVLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9hdXRoL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmhlYWRlcntcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBmb250LXNpemU6IDMwcHg7XG4gIG1hcmdpbi1ib3R0b206IDQwcHg7XG59XG5cbi5yb3d7XG4gIG1hcmdpbi10b3A6IDEwcHg7XG59XG5cbi5lcnJvcntcbiAgY29sb3I6IHJlZDtcbn0iXX0= */"
 
 /***/ }),
 
@@ -476,7 +476,7 @@ module.exports = "<form [formGroup]=\"registerForm\">\n   <div class=\"form-grou
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".header {\n  text-align: center;\n  font-size: 30px;\n  margin-bottom: 40px; }\n\n.row {\n  margin-top: 10px; }\n\n.error {\n  color: red; }\n\n.success {\n  color: green; }\n"
+module.exports = ".header {\n  text-align: center;\n  font-size: 30px;\n  margin-bottom: 40px; }\n\n.row {\n  margin-top: 10px; }\n\n.error {\n  color: red; }\n\n.success {\n  color: green; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VidW50dS93b3Jrc3BhY2Uvc3JjL2FwcC9hdXRoL3JlZ2lzdGVyL3JlZ2lzdGVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usa0JBQWtCO0VBQ2xCLGVBQWU7RUFDZixtQkFBbUIsRUFBQTs7QUFHckI7RUFDRSxnQkFBZ0IsRUFBQTs7QUFHbEI7RUFDRSxVQUFVLEVBQUE7O0FBR1o7RUFDRSxZQUFZLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9hdXRoL3JlZ2lzdGVyL3JlZ2lzdGVyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmhlYWRlcntcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBmb250LXNpemU6IDMwcHg7XG4gIG1hcmdpbi1ib3R0b206IDQwcHg7XG59XG5cbi5yb3d7XG4gIG1hcmdpbi10b3A6IDEwcHg7XG59XG5cbi5lcnJvcntcbiAgY29sb3I6IHJlZDtcbn1cblxuLnN1Y2Nlc3N7XG4gIGNvbG9yOiBncmVlbjtcbn0iXX0= */"
 
 /***/ }),
 
@@ -591,7 +591,7 @@ module.exports = "<div class=\"container\">\n  <div class=\"row\">\n    <div cla
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".image {\n  width: 100%; }\n"
+module.exports = ".image {\n  width: 100%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3VidW50dS93b3Jrc3BhY2Uvc3JjL2FwcC9hdXRoL3VzZXIvdXNlci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFdBQ0YsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2F1dGgvdXNlci91c2VyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmltYWdle1xuICB3aWR0aDogMTAwJVxufSJdfQ== */"
 
 /***/ }),
 
@@ -704,7 +704,7 @@ module.exports = "<div class=\"container\">\n  <h2 *ngFor=\"let users of users |
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NhcmJvbi9jYXJib24uY29tcG9uZW50LnNjc3MifQ== */"
 
 /***/ }),
 
@@ -989,7 +989,7 @@ var UserService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"container\">\n  <h2 *ngFor=\"let users of users | async\">\n      Your current stats at {{users.address1}} are:\n  </h2>\n  <div class=\"row\">\n    <div class=\"col-12\">\n      <table class=\"table\">\n        <thead class=\"dark\">\n          <tr>\n            <th scope=\"col\">\n              Hourly Price\n            </th>\n            <th scope=\"col\">\n              Grid Fossil Fuel Footprint\n            </th>\n            <th scope=\"col\">\n              Solar Generation\n            </th>\n            <th scope=\"col\">\n              Demand\n            </th>\n        </thead>\n        <tbody>\n          <tr>\n            <td *ngFor=\"let prices of prices | async\" [ngStyle]=\"{'color': setPriceColor(prices.price)}\">\n              {{prices.price * 0.01 | currency}}\n            </td>\n            <td *ngFor=\"let carbons of carbons | async\" [ngStyle]=\"{'color': setCarbonColor(carbons.percent)}\">\n              {{carbons.percent / 100 | percent}}\n            </td>\n            <td *ngFor=\"let solars of solars | async\" [ngStyle]=\"{'color': setGenerationColor(solars.generation)}\">\n              {{solars.generation | number : '1.0-2'}} W\n            </td>\n            <td *ngFor=\"let uses of uses | async\" [ngStyle]=\"{'color': setDemandColor(uses.demand)}\">\n              {{uses.demand / 10000000000 | number : '1.0-2'}} W\n            </td>\n          </tr>\n          <tr>\n          <td *ngFor=\"let carbons of carbons | async\">\n            Current hourly price in the {{carbons.ba}} ComEd node.\n          </td>\n          <td *ngFor=\"let carbons of carbons | async\">\n            Current % of fossil fuel generation in the {{carbons.ba}} ISO.\n          </td>\n          <td *ngFor=\"let users of users | async\">\n             Current solar generation at {{users.address1}}.\n           </td>\n           <td *ngFor=\"let users of users | async\">\n             Current demand net of generation at {{users.address1}}.\n           </td>\n          <tr>\n        </tbody>\n      </table>\n    </div>\n  </div>  \n</div>"
+module.exports = "\n<div class=\"container\">\n  <h2 *ngFor=\"let users of users | async\">\n      Your current stats at {{users.address1}} are:\n  </h2>\n  <div class=\"row\">\n    <div class=\"col-12\">\n      <table class=\"table\">\n        <thead class=\"dark\">\n          <tr>\n            <th scope=\"col\">\n              Hourly Price\n            </th>\n            <th scope=\"col\">\n              Grid Fossil Fuel Footprint\n            </th>\n            <th scope=\"col\">\n              Solar Generation\n            </th>\n            <th scope=\"col\">\n              Demand\n            </th>\n        </thead>\n        <tbody>\n          <tr>\n            <td *ngFor=\"let prices of prices | async\" [ngStyle]=\"{'color': setPriceColor(prices.price)}\">\n              {{prices.price | currency}}\n            </td>\n            <td *ngFor=\"let carbons of carbons | async\" [ngStyle]=\"{'color': setCarbonColor(carbons.percent)}\">\n              {{carbons.percent | percent}}\n            </td>\n            <td *ngFor=\"let solars of solars | async\" [ngStyle]=\"{'color': setGenerationColor(solars.generation)}\">\n              {{solars.generation | number : '1.0-2'}} W\n            </td>\n            <td *ngFor=\"let consumptions of consumptions | async\" [ngStyle]=\"{'color': setDemandColor(consumptions.demand)}\">\n              {{consumptions.demand | number : '1.0-2'}} W\n            </td>\n          </tr>\n          <tr>\n          <td *ngFor=\"let carbons of carbons | async\">\n            Current hourly price in the {{carbons.ba}} ComEd node.\n          </td>\n          <td *ngFor=\"let carbons of carbons | async\">\n            Current % of fossil fuel generation in the {{carbons.ba}} ISO.\n          </td>\n          <td *ngFor=\"let users of users | async\">\n             Current solar generation at {{users.address1}}.\n           </td>\n           <td *ngFor=\"let users of users | async\">\n             Current demand at {{users.address1}}.\n           </td>\n          <tr>\n        </tbody>\n      </table>\n    </div>\n  </div>  \n</div>"
 
 /***/ }),
 
@@ -1000,7 +1000,7 @@ module.exports = "\n<div class=\"container\">\n  <h2 *ngFor=\"let users of users
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Rhc2hib2FyZC9kYXNoYm9hcmQuY29tcG9uZW50LnNjc3MifQ== */"
 
 /***/ }),
 
@@ -1026,85 +1026,108 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+//import { DataService } from '../services/data.service';
 
 var DashboardComponent = /** @class */ (function () {
-    function DashboardComponent(afs) {
+    function DashboardComponent(
+    //    private ds: DataService, 
+    afs) {
         this.afs = afs;
-        // timestamp in milliseconds
-        var currentTime = new Date().getTime();
-        this.pricesCol = this.afs.collection('prices', function (ref) {
-            return ref
+        this.pricesCol = this.afs.collection('prices', function (pricesRef) {
+            return pricesRef
                 .orderBy('timestamp', 'desc')
                 .limit(1);
         });
         this.prices = this.pricesCol.valueChanges();
-        this.carbonsCol = this.afs.collection('carbons', function (ref) {
-            return ref
+        //this.prices = this.db.col$()
+        this.carbonsCol = this.afs.collection('carbons', function (carbonsRef) {
+            return carbonsRef
                 .orderBy('validUntil', 'desc')
                 .limit(1);
         });
         this.carbons = this.carbonsCol.valueChanges();
-        this.solarsCol = this.afs.collection('solars', function (ref) {
-            return ref
+        //this.carbons = this.db.col$()
+        this.solarsCol = this.afs.collection('solars', function (solarsRef) {
+            return solarsRef
                 .orderBy('timestamp', 'desc')
                 .limit(1);
         });
         this.solars = this.solarsCol.valueChanges();
-        this.usesCol = this.afs.collection('uses', function (ref) {
-            return ref
+        //this.solars = this.db.col$()
+        this.consumptionsCol = this.afs.collection('consumptions', function (consumptionsRef) {
+            return consumptionsRef
                 .orderBy('timestamp', 'desc')
                 .limit(1);
         });
-        this.uses = this.usesCol.valueChanges();
+        this.consumptions = this.consumptionsCol.valueChanges();
+        //this.consumptions = this.db.col$()
         this.usersCol = this.afs.collection('users');
         this.users = this.usersCol.valueChanges();
+        //this.users = this.db.col$()
     }
+    // Color Picker
     DashboardComponent.prototype.setPriceColor = function (price) {
         switch (true) {
             case price > 7:
                 return 'red';
+                break;
             case price > 3 && price <= 7:
                 return 'orange';
+                break;
             case price <= 3:
                 return 'green';
+                break;
             case price != null:
                 return 'gray';
+                break;
         }
     };
     DashboardComponent.prototype.setCarbonColor = function (percent) {
         switch (true) {
             case percent > .75:
                 return 'red';
+                break;
             case percent > .50 && percent <= .75:
                 return 'orange';
+                break;
             case percent <= .50:
                 return 'green';
+                break;
             case percent != null:
                 return 'gray';
+                break;
         }
     };
     DashboardComponent.prototype.setGenerationColor = function (generation) {
         switch (true) {
             case generation < 0:
                 return 'black';
+                break;
             case generation <= 500 && generation < 1750:
                 return 'orange';
+                break;
             case generation >= 1075:
                 return 'green';
+                break;
             case generation != null:
                 return 'gray';
+                break;
         }
     };
     DashboardComponent.prototype.setDemandColor = function (demand, generation) {
         switch (true) {
-            case (parseInt(demand) / 1000000000) > generation:
+            case demand > generation:
                 return 'red';
-            case (parseInt(demand) / 1000000000) >= generation && (parseInt(demand) / 1000000000) > 0:
+                break;
+            case demand >= generation && demand > 0:
                 return 'orange';
-            case (parseInt(demand) / 1000000000) <= generation:
+                break;
+            case demand <= generation:
                 return 'green';
+                break;
             case demand != null:
                 return 'gray';
+                break;
         }
     };
     DashboardComponent.prototype.ngOnInit = function () {
@@ -1131,7 +1154,7 @@ var DashboardComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-4\">\n  </div>\n  <div class=\"col-4 m-4\">\n     <div *ngIf=\"isEnvironmental | async; let isEnvironmental; else notEnvironmental\">\n        <h1><i class=\"material-icons md-48 pr-2\">thumb_up</i>Use Electricity</h1>\n        <div class=\"alert-success\">\n          <h2 *ngFor=\"let carbons of carbons | async\" class=\"p-4\">You can use electricity now. It's environmentally friendly. The grid is using {{ carbons.percent / 100 | percent }} fossil fuel generation.</h2>\n        </div>\n    </div>\n      \n      <ng-template #notEnvironmental>\n        <h1><i class=\"material-icons md-48 pr-2\">warning</i>Conserve Electricity</h1>\n        <div class=\"alert-danger\">\n          <h2 *ngFor=\"let carbons of carbons | async\" class=\"p-4\">You should not use electricity now. It's not environmentally friendly. The grid is using {{ carbons.percent / 100 | percent }} fossil fuel generation.</h2>\n        </div>\n      </ng-template>\n  </div>\n  <div class=\"col-4\">\n  </div>\n</div>"
+module.exports = "<div class=\"row\">\n  <div class=\"col-4\">\n  </div>\n  <div class=\"col-4 m-4\">\n    <div>\n      <div *ngIf=\"carbons.percent < carbonThreshold | async; else notEnvironmental\">\n       <h1><i class=\"material-icons md-48 pr-2\">thumb_up</i>Use Electricity</h1>\n        <div class=\"alert-success\">\n          <h2 *ngFor=\"let carbons of carbons | async\" class=\"p-4\">You can use electricity now. It's environmentally friendly. The grid is currently {{ carbons.percent | percent }} fossil fuel generation.</h2>\n        </div>\n      </div>\n        \n        <ng-template #notEnvironmental>\n          <h1><i class=\"material-icons md-48 pr-2\">warning</i>Conserve Electricity</h1>\n          <div class=\"alert-danger\">\n          <h2 *ngFor=\"let carbons of carbons | async\" class=\"p-4\">You should not use electricity now. It's not environmentally friendly. The grid is currently {{ carbons.percent | percent }} fossil fuel generation.</h2>\n          </div>\n        </ng-template>\n    \n        <ng-template #loading>\n          Loading...\n        </ng-template>\n      \n    </div>\n  </div>\n  <div class=\"col-4\">\n  </div>\n</div>"
 
 /***/ }),
 
@@ -1142,7 +1165,7 @@ module.exports = "<div class=\"row\">\n  <div class=\"col-4\">\n  </div>\n  <div
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL251ZGdlL251ZGdlLmNvbXBvbmVudC5zY3NzIn0= */"
 
 /***/ }),
 
@@ -1169,44 +1192,20 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+// import { FirestoreService } from '../services/firestore.service';
 var NudgeComponent = /** @class */ (function () {
     function NudgeComponent(afs) {
         this.afs = afs;
-        this.pricesCol = this.afs.collection('prices', function (ref) {
-            return ref
-                .orderBy('timestamp', 'desc')
-                .limit(1);
-        });
-        this.prices = this.pricesCol.valueChanges();
-        this.carbonsCol = this.afs.collection('carbons', function (ref) {
-            return ref
+        this.carbonThreshold = 0.75;
+        this.carbonsCol = this.afs.collection('carbons', function (carbonsRef) {
+            return carbonsRef
                 .orderBy('validUntil', 'desc')
                 .limit(1);
         });
         this.carbons = this.carbonsCol.valueChanges();
-        this.solarsCol = this.afs.collection('solars', function (ref) {
-            return ref
-                .orderBy('timestamp', 'desc')
-                .limit(1);
-        });
-        this.solars = this.solarsCol.valueChanges();
-        this.usesCol = this.afs.collection('uses', function (ref) {
-            return ref
-                .orderBy('timestamp', 'desc')
-                .limit(1);
-        });
-        this.uses = this.usesCol.valueChanges();
-        this.usersCol = this.afs.collection('users');
-        this.users = this.usersCol.valueChanges();
-        var isEnvironmental = true;
-        var carbonCheck = 100;
-        var carbonSwitch = 81;
-        var isEnvironmentalCheck = function (carbonCheck, carbonSwitch) { return carbonCheck >= carbonSwitch; };
-        isEnvironmental = isEnvironmentalCheck(carbonCheck, carbonSwitch);
-        console.log(isEnvironmental);
     }
-    NudgeComponent.prototype.ngOnInit = function () {
-    };
+    //  let isEnvironmental = carbons.percent <= carbonThreshold;
+    NudgeComponent.prototype.ngOnInit = function () { };
     NudgeComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-nudge',
@@ -1218,22 +1217,6 @@ var NudgeComponent = /** @class */ (function () {
     return NudgeComponent;
 }());
 
-/*
-
-// A more complicated switch with price, etc.
-  let isEnvironmentalCheck: boolean = setConsumeBoolean(price, percent, generation, demand) {
-    switch (true) {
-      case price > 3 || percent > 0.75 || generation < 500 || (parseInt(demand) / 1000) > generation:
-        return false;
-      case (price > 3 && price <=7) || (percent > .50 && percent <= .75) || (generation <= 500 && generation < 1750) || ((parseInt(demand) / 1000) >= generation && (parseInt(demand) / 1000) > 0):
-        return false;
-      case price <= 3 || percent <= .50 || generation >= 1075 || (parseInt(demand) / 1000) <= generation:
-        return true;
-      case price != null:
-        return false;
-    }
-  };
-*/
 
 
 /***/ }),

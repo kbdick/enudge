@@ -4,11 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0 --port 8080 --publicHost enudge-kbdick.c9users.io",
-    "build": "ng build --prod --output-path dist --base-href '/enudge/'",
+    "build": "ng build --prod --base-href 'https://kbdick.github.io/enudge/'",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "npx ngh"
+    "deploy": "npx angular-cli-ghpages --dir=dist/enudge"
   },
   "private": true,
   "dependencies": {
@@ -47,6 +47,7 @@
     "@types/jasmine": "^3.3.8",
     "@types/jasminewd2": "^2.0.6",
     "@types/node": "~10.12.21",
+    "angular-cli-ghpages": "^0.5.3",
     "codelyzer": "~4.5.0",
     "jasmine-core": "~3.3.0",
     "jasmine-spec-reporter": "~4.2.1",

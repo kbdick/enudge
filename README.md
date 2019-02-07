@@ -8,6 +8,8 @@ This project was generated with [Angular](https://angular.io). The backend is bu
 3. [Enphase Enlighten](https://enlighten.enphaseenergy.com) for up to 5 minute solar generation output.
 4. [Rainforest Eagle](https://rainforestcloud.com) for up to 6 second electriciy demand.
 
+Deployed to [Github Pages](https://github.com) with [NGH](https://github.com/angular-schule/angular-cli-ghpages). 
+
 Future Builds:
 
 1. Reports with [Data Studio](https://datastudio.google.com)

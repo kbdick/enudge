@@ -1,0 +1,30 @@
+// Import material theming functions
+@import '~@angular/material/theming';
+
+// Copy the palettes from theme.scss.
+$app-primary: mat-palette($mat-cyan, 800);
+$app-secondary: mat-palette($mat-gray, 500);
+$app-accent:  mat-palette($mat-deep-orange, A200, A100, A400);
+
+// Create globally available color vars 
+$primary: mat-color($app-primary);
+$secondary: mat-color($app-secondary);
+$accent: mat-color($app-accent);
+$heading-color: #384850;
+
+body, p, div {
+  color: $secondary;
+}
+
+.btn-floating {
+  box-shadow: none;
+  background: $primary;
+}
+
+h1, h2, h3, h5, h6 {
+  color: $heading-color;
+}
+
+h1 {
+  font-size: 2.875;
+}

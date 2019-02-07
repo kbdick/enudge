@@ -7,8 +7,7 @@
     "build": "ng build --prod --base-href 'https://kbdick.github.io/enudge/'",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "deploy": "npx angular-cli-ghpages --dir=dist/enudge"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {

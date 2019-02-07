@@ -41,6 +41,7 @@ import { CarbonComponent } from './carbon/carbon.component';
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
     AngularFireAuthModule,
+    MaterialModule,
     NgbModule.forRoot(),
     ReactiveFormsModule
   ],

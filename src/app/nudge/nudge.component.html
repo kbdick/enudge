@@ -1,28 +1,30 @@
 <div class="row">
-  <div class="col-4">
-  </div>
-  <div class="col-4 m-4">
-    <div>
-      <div *ngIf="0.99 < carbonThreshold | async; else notEnvironmental">
-       <h1><i class="material-icons md-48 pr-2">thumb_up</i>Use Electricity</h1>
-        <div class="alert-success">
-          <h2 *ngFor="let carbons of carbons | async" class="p-4">You can use electricity now. It's environmentally friendly. The grid is currently {{ carbons.percent | percent }} fossil fuel generation.</h2>
-        </div>
-      </div>
+  <div class="col m-5 align-self-center">
+      <mat-card *ngIf="0.99 < carbonThreshold | async; else notEnvironmental" class="nudge-card">
+        <mat-card-header>
+          <h1><i class="material-icons pr-2" color="accent">thumb_up</i>Use Electricity</h1>
+        </mat-card-header>
+        <mat-card-content>
+          <h2 *ngFor="let carbons of carbons | async" class="p-4 alert-success">You can use electricity now. It's environmentally friendly. The grid is currently {{ carbons.percent | percent }} fossil fuel generation.</h2>
+        </mat-card-content>
+      </mat-card>
         
         <ng-template #notEnvironmental>
-          <h1><i class="material-icons md-48 pr-2">warning</i>Conserve Electricity</h1>
-          <div class="alert-danger">
-          <h2 *ngFor="let carbons of carbons | async" class="p-4">You should not use electricity now. It's not environmentally friendly. The grid is currently {{ carbons.percent | percent }} fossil fuel generation.</h2>
-          </div>
+          <mat-card-header>
+            <h2 class="warn"><i class="material-icons pr-2">warning</i>Conserve Electricity</h2>
+          </mat-card-header>
+          <mat-card-content>
+            <h2 *ngFor="let carbons of carbons | async" class="p-4 alert-danger">You should not use electricity now. It's not environmentally friendly. The grid is currently {{ carbons.percent | percent }} fossil fuel generation.</h2>
+          </mat-card-content>
         </ng-template>
     
         <ng-template #loading>
-          Loading...
+          <mat-card-header>
+            <h2>Loading...</h2>
+          </mat-card-header>
+          <mat-card-content>
+            Getting grid data...
+          </mat-card-content>
         </ng-template>
-      
-    </div>
-  </div>
-  <div class="col-4">
-  </div>
+  </div>      
 </div>

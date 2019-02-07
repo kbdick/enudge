@@ -1,0 +1,13 @@
+@import "../styles/global/variables"; // Custom variables
+
+.nudge-card {
+    max-width: 400px;
+}
+
+.warn {
+    color: $warn;
+}
+
+.secondary {
+    color: $secondary;
+}

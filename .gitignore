@@ -1,7 +1,7 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 /src/environments
-secrets
-e2e
+/secrets
+/e2e
 
 # compiled output
 /dist
@@ -25,7 +25,15 @@ e2e
 .gitignore
 firebase-debug.log
 .firebase
-
+.editorconfig
+.gitignore
+firebase.json
+firebase_sdk.js
+firestore_functions.txt
+notes.md
+package-lock.json
+tsconfig.json
+tslint.json
 
 # IDE - VSCode
 .vscode/*

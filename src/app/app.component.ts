@@ -9,6 +9,8 @@ import { Observable } from 'rxjs/Observable';
 })
 
 export class AppComponent implements OnInit {
+  events: string[] = [];
+  opened: boolean;
 
   title = 'eNudge';
 

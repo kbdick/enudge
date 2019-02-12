@@ -1,13 +1,24 @@
-<mat-sidenav-container>
+<mat-toolbar>
+  <app-brand></app-brand>
+  <app-nav></app-nav>
+</mat-toolbar>
+
+<mat-sidenav-container class="sidenav-sidenav-container">
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
+               (closed)="events.push('close!')">
+    <app-sidenav></app-sidenav>
+  </mat-sidenav>
   
+  <mat-sidenav-content>
+    <p><button mat-button (click)="sidenav.toggle()"><mat-icon mat-list-icon>menu</mat-icon></button></p>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+<!--
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-<div class="navbar-brand brand-offset">
-<a href="">
-    <img class="d-none d-lg-block img-fluid" src="assets/img/enudge-prod-logo.svg" width="75px" height="auto">
-    <img class="d-lg-none img-fluid mt-3 ml-2" src="assets/img/enudge-e-logo.svg" width="75px" height="auto">
-<span class="secondary">eNudge</span>
-</a>
-</div>
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -36,7 +47,4 @@
     </ul>
   </div>
 </nav>
-
-<router-outlet></router-outlet>
-
-</mat-sidenav-container>
+-->

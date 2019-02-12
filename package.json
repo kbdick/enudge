@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0 --port 8080 --publicHost enudge-kbdick.c9users.io",
-    "build": "ng build --prod --base-href 'https://kbdick.github.io/enudge/'",
+    "build": "ng build --prod --base-href '/enudge/enudge/'",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

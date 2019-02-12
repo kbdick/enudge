@@ -1,8 +1,6 @@
-
-<div class="container">
-  <h2 *ngFor="let users of users | async">
-      Your current stats at {{users.address1}} are:
-  </h2>
+  <div *ngFor="let users of users | async">
+      <h2>Your current stats at {{users.address1}} are:</h2>
+  </div>
   <div class="row">
     <div class="col-12">
       <table class="table">
@@ -53,5 +51,4 @@
         </tbody>
       </table>
     </div>
-  </div>  
-</div>
+  </div>

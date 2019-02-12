@@ -3,7 +3,7 @@
 
 // Copy the palettes from theme.scss.
 $app-primary: mat-palette($mat-light-blue, 200);
-$app-secondary: mat-palette($mat-green, 200);
+$app-secondary: mat-palette($mat-green, 400);
 $app-accent:  mat-palette($mat-yellow, A200, A100, A400);
 $app-warn:    mat-palette($mat-red);
 
@@ -12,7 +12,11 @@ $primary: mat-color($app-primary);
 $secondary: mat-color($app-secondary);
 $accent: mat-color($app-accent);
 $warn: mat-color($app-warn);
-$heading-color: #384850;
+$heading-color: #384850; 
+$green: green;
+$gray: gray;
+$orange: orange; 
+$gold: gold;
 
 body, p, div {
   color: $secondary;

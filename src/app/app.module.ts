@@ -8,6 +8,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 export const firebaseConfig = environment.firebaseConfig;
+import { FirestoreService } from './core/firestore.service';
 
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './404/page-not-found/page-not-found.component';
@@ -34,7 +35,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     UiModule,
     NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [ FirestoreService ],
   bootstrap: [ AppComponent ]
 })
 

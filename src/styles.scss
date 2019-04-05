@@ -1,7 +1,7 @@
 @import '~@angular/material/theming'; // Material Design theming
 @import "./styles/global/theme"; // Custom Material Design colors. 
 @import "./styles/global/fonts"; // Custom fonts
-@import "~bootstrap/scss/bootstrap"; // All of bootstrap. Remove if using individual imports below
+// @import "~bootstrap/scss/bootstrap"; // All of bootstrap. Remove if using individual imports below
 @import "./styles/global/reset"; // Minor changes to make Material Design more friendly with bootstrap
 
 // Include the common styles for Angular Material. We include this here so that you only

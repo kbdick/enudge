@@ -17,15 +17,13 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { MaterialModule } from './material/material.module';
 import { UiModule } from './ui/ui.module';
 import { SidenavComponent } from './sidenav/sidenav.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
-    SidenavComponent,
-    UserProfileComponent
+    SidenavComponent
   ],
   imports: [
     BrowserModule,

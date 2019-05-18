@@ -1,0 +1,17 @@
+.DS_STORE
+
+/dist/
+node_modules
+
+.c9
+
+# Don't check in secret files
+*secret.js
+
+# Ignore npm/yarn debug log
+npm-debug.log
+
+# User specific bazel settings
+.bazelrc.user
+
+package-lock.json

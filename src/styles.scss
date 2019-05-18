@@ -1,0 +1,53 @@
+@import '~@angular/material/theming'; // Material Design theming
+@import "./styles/global/theme"; // Custom Material Design colors. 
+@import "./styles/global/fonts"; // Custom fonts
+@import "~bootstrap/scss/bootstrap"; // remove if using individual imports
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core($custom-typography);
+
+// Uncomment each below if you also want Bootstrap (recommended)
+// Imports individual utilities, functions, variables, and mixins that are needed by other Bootstrap files but not really covered by Material Design
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/type";
+
+// Not Imported from Bootstrap, but available (e.g., if you have no tables in your site, don't bother importing the table styles). Just add above or uncomment. You can also add the entire bootstrap library if you don't want to deal with individual modules.
+
+/*
+@import "code";
+@import "tables";
+@import "forms";
+@import "buttons";
+@import "transitions";
+@import "button-group";
+@import "input-group";
+@import "custom-forms";
+@import "card";
+@import "breadcrumb";
+@import "pagination";
+@import "badge";
+@import "jumbotron";
+@import "alert";
+@import "progress";
+@import "media";
+@import "list-group";
+@import "close";
+@import "modal";
+@import "tooltip";
+@import "popover";
+@import "carousel";
+@import "print";
+*/

@@ -1,0 +1,50 @@
+<mat-toolbar>
+  <app-brand></app-brand>
+  <app-nav></app-nav>
+</mat-toolbar>
+
+<mat-sidenav-container class="sidenav-sidenav-container">
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
+               (closed)="events.push('close!')">
+    <app-sidenav></app-sidenav>
+  </mat-sidenav>
+  
+  <mat-sidenav-content>
+    <p><button mat-button (click)="sidenav.toggle()"><mat-icon mat-list-icon>menu</mat-icon></button></p>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+<!--
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="dashboard">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about">About</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Reports
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="prices">Prices</a>
+          <a class="dropdown-item" href="carbon">Carbon</a>
+          <a class="dropdown-item" href="generation">Generation</a>
+          <a class="dropdown-item" href="demand">Demand</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="dashboard">Snapshot</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+-->

@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table">
+        <thead class="dark">
+          <tr>
+            <th scope="col">
+                Mean
+            </th>
+            <th scope="col">
+                Median
+            </th>
+            <th scope="col">
+                High
+            </th>
+            <th scope="col">
+                Low
+            </th>
+        </thead>
+        <tbody>
+          <tr>
+            <td *ngFor="let carbons of carbons | async" [ngStyle]="{'color': setCarbonColor(carbons.percent)}">
+              {{ calculateAverage(carbons.percent) }}
+            </td>
+            <td *ngFor="let carbons of carbons | async" [ngStyle]="{'color': setCarbonColor(carbons.percent)}">
+              {{carbons.median | percent}}
+            </td>
+            <td *ngFor="let carbons of carbons | async" [ngStyle]="{'color': setCarbonColor(carbons.percent)}">
+              {{carbons.max | percent}}
+            </td>
+            <td *ngFor="let carbons of carbons | async" [ngStyle]="{'color': setCarbonColor(carbons.percent)}">
+              {{carbons.min | percent}}
+            </td>
+          </tr>
+          <tr>
+          <td *ngFor="let carbons of carbons | async">
+            Mean percent {{carbons.ba}} ISO.
+          </td>
+          <td *ngFor="let carbons of carbons | async">
+            Median percent {{carbons.ba}} ISO.
+          </td>
+          <td *ngFor="let carbons of carbons | async">
+            High percent {{carbons.ba}} ISO.
+          </td>
+          <td *ngFor="let carbons of carbons | async">
+            Low percent {{carbons.ba}} ISO.
+          </td>
+          <tr>
+        </tbody>
+      </table>
+    </div>
+  </div>  
+</div>

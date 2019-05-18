@@ -1,0 +1,25 @@
+// Define a custom typography config that overrides the font-family as well as the
+// `headlines` and `body-1` levels.
+
+// Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic&amp;subset=latin-ext');
+
+$custom-typography: mat-typography-config(
+    $font-family:   'Roboto',
+    $display-4:     mat-typography-level(112sp, 112px, 300),
+    $display-3:     mat-typography-level(56sp, 56sp, 200),
+    $display-2:     mat-typography-level(45sp, 48sp, 200),
+    $display-1:     mat-typography-level(34sp, 40sp, 200),
+    $headline:      mat-typography-level(24sp, 32sp, 200),
+    $title:         mat-typography-level(20sp, 32sp, 200),
+    $subheading-2:  mat-typography-level(16sp, 28sp, 200),
+    $subheading-1:  mat-typography-level(15sp, 24sp, 200),
+    $body-2:        mat-typography-level(14sp, 24sp, 200),
+    $body-1:        mat-typography-level(14sp, 20sp, 200),
+    $caption:       mat-typography-level(12sp, 20sp, 200),
+    $button:        mat-typography-level(14sp, 14sp, 200),
+    $input:         mat-typography-level(inherit, 1.125, 200)
+);
+
+// Override typography for all Angular Material, including mat-base-typography and all components.
+@include angular-material-typography($custom-typography);

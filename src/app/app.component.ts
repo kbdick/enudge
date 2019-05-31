@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Observable } from 'rxjs/Observable';
 
@@ -8,7 +8,7 @@ import { Observable } from 'rxjs/Observable';
   styleUrls: ['app.component.scss']
 })
 
-export class AppComponent implements OnInit {
+export class AppComponent {
   events: string[] = [];
   opened: boolean;
 

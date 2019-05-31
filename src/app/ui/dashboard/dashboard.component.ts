@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 //import { DataService } from '../services/data.service';
-import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { Carbons } from '../carbon/carbons';
 import { Prices } from '../price/prices';
@@ -39,8 +39,7 @@ export class DashboardComponent implements OnInit {
   users: Observable<Users[]>;
 
   constructor(
-    public db: FirestoreService, 
-    private afs: AngularFirestore) { }
+    public db: FirestoreService) { }
     
   
   ngOnInit() {

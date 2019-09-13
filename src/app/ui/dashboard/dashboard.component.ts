@@ -2,11 +2,8 @@ import { Component, OnInit } from '@angular/core';
 //import { DataService } from '../services/data.service';
 import { AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
-import { Carbons } from '../carbon/carbons';
+import { Leem } from '../carbon/leem';
 import { Prices } from '../price/prices';
-import { Solars } from '../solar/solars';
-import { Consumptions } from '../consumption/consumptions';
-import { Users } from '../user/users';
 import { FirestoreService } from '../../core/firestore.service';
 import 'rxjs/add/operator/map';
 
@@ -25,27 +22,22 @@ export interface DashboardColumns {
 
 export class DashboardComponent implements OnInit {
   
-  displayedColumns: string[] = ['Hourly Price', 'Fossil Fuel Footprint', 'Solar Generation', 'Demand'];
+  today: number = Date.now();
+  
+  displayedColumns: string[] = ['Hourly Price', 'CO2 Tomorrow', 'CO2 Today'];
   
   pricesCol: AngularFirestoreCollection<Prices>;
   prices: Observable<Prices[]>;
-  carbonsCol: AngularFirestoreCollection<Carbons>;
-  carbons: Observable<Carbons[]>;
-  solarsCol: AngularFirestoreCollection<Solars>;
-  solars: Observable<Solars[]>;
-  consumptionsCol: AngularFirestoreCollection<Consumptions>;
-  consumptions: Observable<Consumptions[]>;
-  usersCol: AngularFirestoreCollection<Users>;
-  users: Observable<Users[]>;
-
+  leemCol: AngularFirestoreCollection<Leem>;
+  leem: Observable<Leem[]>;
+  
   constructor(
     public db: FirestoreService) { }
     
-  
   ngOnInit() {
-    
-    this.carbons = this.db.col$('carbons', carbonsRef => {
-      return carbonsRef
+  
+    this.leem = this.db.col$('leem', leemRef => {
+      return leemRef
               .orderBy('timestamp', 'desc')
               .limit(1)
         });
@@ -55,21 +47,6 @@ export class DashboardComponent implements OnInit {
               .orderBy('timestamp', 'desc')
               .limit(1)
         });
-    
-    this.solars = this.db.col$('solars', solarsRef => {
-      return solarsRef
-              .orderBy('timestamp', 'desc')
-              .limit(1)
-        });
-    
-    this.consumptions = this.db.col$('consumptions', consumptionsRef => {
-      return consumptionsRef
-              .orderBy('timestamp', 'desc')
-              .limit(1)
-        });
-    
-    this.users = this.db.col$('users')
-    
   }
   
   // Color Picker
@@ -95,66 +72,26 @@ export class DashboardComponent implements OnInit {
       }
     }
     
-    setCarbonClass (percent) {
+    setCarbonClass (dayaheadCO2rate) {
       switch (true) {
-        case percent > .75: {
+        case dayaheadCO2rate >= 1920: {
           return 'bad';
           break;
         }
-        case percent > .50 && percent <= .75: {
+        case dayaheadCO2rate > 1650 && dayaheadCO2rate < 1920: {
           return 'okay';
           break;
         }
-        case percent <= .50: {
+        case dayaheadCO2rate <= 1650: {
           return 'good';
           break;
         }
-        case percent = null: {
+        case dayaheadCO2rate = null: {
           return 'noData';
           break;
         }
       }
     }
     
-    setGenerationClass (generation) {
-      switch (true) {
-        case generation < 0: {
-          return 'bad';
-          break;
-        }
-        case generation <= 500 && generation < 1750: {
-          return 'okay';
-          break;
-        }
-        case generation >= 1075: {
-          return 'good';
-          break;
-        }
-        case generation = null: {
-          return 'noData';
-          break;
-        }
-      }
-    }
     
-    setDemandClass (demand, generation) {
-      switch (true) {
-        case demand > generation: {
-          return 'bad';
-          break;
-        }
-        case demand >= generation && demand > 0: {
-          return 'okay';
-          break;
-        }
-        case demand <= generation: {
-          return 'good';
-          break;
-        }
-        case demand = null: {
-          return 'noData';
-          break;
-        }
-      }
-    }
 }

@@ -1,34 +1,7 @@
-<!--<table mat-table class="mat-elevation-z8">
-
-  <ng-container matColumnDef="Hourly Price">
-    <th mat-header-cell *matHeaderCellDef> Hourly Price </th>
-    <td mat-cell *matCellDef><span *ngFor="let prices of prices | async" [ngClass]="setPriceClass(prices.price)"> {{prices.price | currency}} </span></td>
-  </ng-container>
-
-  <ng-container matColumnDef="Fossil Fuel Footprint">
-    <th mat-header-cell *matHeaderCellDef> Fossil Fuel Footprint </th>
-    <td mat-cell *matCellDef><span *ngFor="let carbons of carbons | async" [ngClass]="setCarbonClass(carbons.percent)"> {{carbons.percent | percent}} </span></td>
-  </ng-container>
-
-  <ng-container matColumnDef="Solar Generation">
-    <th mat-header-cell *matHeaderCellDef> Solar Generation </th>
-    <td mat-cell *matCellDef><span *ngFor="let solars of solars | async" [ngClass]="setGenerationClass(solars.generation)"> {{solars.generation | number : '1.0-2'}} W </span></td>
-  </ng-container>
-
-  <ng-container matColumnDef="Demand">
-    <th mat-header-cell *matHeaderCellDef> Demand </th>
-    <td mat-cell *matCellDef><span *ngFor="let consumptions of consumptions | async" [ngClass]="setDemandClass(consumptions.demand)"> {{consumptions.demand | number : '1.0-2'}} W </span></td>
-  </ng-container>
-
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
-
--->
 
 <div class="m-5">
-  <div *ngFor="let users of users | async">
-      <h2>Your current stats at {{users.address1}} are:</h2>
+  <div>
+      <h2>Chicago price and emissions conditions are:</h2>
   </div>
   <div class="row">
     <div class="col-12">
@@ -36,53 +9,43 @@
           <thead class="dark">
             <tr>
               <th scope="col">
-                Hourly Price
+                Hourly Price of Electricity
               </th>
               <th scope="col">
-                Grid Fossil Fuel Footprint
+                Tomorrow's Emissions (tons CO2/MWh)
               </th>
               <th scope="col">
-                Solar Generation
-              </th>
-              <th scope="col">
-                Demand
+                Today's Emissions (tons CO2/MWh)
               </th>
           </thead>
       
         <tbody>
-          <ng-container *ngIf="solars | async as solars">
+          <ng-container>
           <tr>
             <td *ngFor="let prices of prices | async" [ngClass]="setPriceClass(prices.price)">
               {{prices.price | currency}}
             </td>
-            <td *ngFor="let carbons of carbons | async" [ngClass]="setCarbonClass(carbons.percent)">
-              {{carbons.percent | percent}}
+            <td *ngFor="let leem of leem | async" [ngClass]="setCarbonClass(leem.dayaheadCO2rate)">
+              {{leem.dayaheadCO2rate | number}}
             </td>
-            <td *ngFor="let solars of solars" [ngClass]="setGenerationClass(solars.generation)">
-              {{solars.generation | number : '1.0-2'}} W
-            </td>
-            <td *ngFor="let consumptions of consumptions | async, let solars of solars" [ngClass]="setDemandClass(consumptions.demand)">
-              {{consumptions.demand | number : '1.0-2'}} W
+            <td *ngFor="let leem of leem | async" [ngClass]="setCarbonClass(leem.currentCO2rate)">
+              {{leem.currentCO2rate | number}} 
             </td>
           </tr>
           </ng-container>
           <tr>
-          <td *ngFor="let carbons of carbons | async">
-            Current hourly price in the {{carbons.ba}} ComEd node.
+          <td *ngFor="let leem of leem | async">
+            Current hourly price in ComEd.
           </td>
-          <td *ngFor="let carbons of carbons | async">
-            Current % of fossil fuel generation in the {{carbons.ba}} ISO.
+          <td *ngFor="let leem of leem | async">
+            Tomorrow at {{today | date:'h a'}}
           </td>
-          <td *ngFor="let users of users | async">
-             Current solar generation at {{users.address1}}.
-           </td>
-           <td *ngFor="let users of users | async">
-             Current demand at {{users.address1}}.
-           </td>
+          <td *ngFor="let leem of leem | async">
+            Today at {{today | date:'h a'}}
+          </td>
           <tr>
         </tbody>
       </table>
-    
     
     </div>
   </div>

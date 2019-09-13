@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
-import { Leem } from '../carbon/leem';
+import { Carbons } from '../carbon/carbons';
 import { FirestoreService } from '../../core/firestore.service';
 
 @Component({
@@ -12,20 +12,20 @@ import { FirestoreService } from '../../core/firestore.service';
 
 export class NudgeComponent implements OnInit {
 
-  leemCol: AngularFirestoreCollection<Leem>;
-  leem: Observable<Leem[]>;
+  carbonsCol: AngularFirestoreCollection<Carbons>;
+  carbons: Observable<Carbons[]>;
 
   constructor(public db: FirestoreService, private afs: AngularFirestore) { }
 
   ngOnInit() {
 
-    this.leem = this.db.col$('leem', carbonsRef => {
+    this.carbons = this.db.col$('carbons', carbonsRef => {
       return carbonsRef
               .orderBy('timestamp', 'desc')
               .limit(1)
         });
         
-    let carbonThreshold: number = 1650;
+    let carbonThreshold: number = 0.75;
   }
 }
 

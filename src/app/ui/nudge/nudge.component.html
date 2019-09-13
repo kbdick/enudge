@@ -1,11 +1,11 @@
 <div class="row">
-  <div class="col m-5 align-self-center" *ngFor="let leem of leem | async">
-      <mat-card *ngIf="leem.currentCO2rate < 1650; else notEnvironmental" class="nudge-card">
+  <div class="col m-5 align-self-center" *ngFor="let carbons of carbons | async">
+      <mat-card *ngIf="carbons.percent < 0.75; else notEnvironmental" class="nudge-card">
         <mat-card-header>
           <h2 class="green"><i class="material-icons pr-2">thumb_up</i>Use Electricity</h2>
         </mat-card-header>
         <mat-card-content>
-          <h2 class="p-4 alert-success">You can use electricity now. It's environmentally friendly. The grid is currently operating with low CO2 emissions.</h2>
+          <h2 class="p-4 alert-success">You can use electricity now. It's environmentally friendly. The grid is currently {{ carbons.percent | percent }} fossil fuel generation.</h2>
         </mat-card-content>
       </mat-card>
         
@@ -15,7 +15,7 @@
             <h2 class="warn"><i class="material-icons pr-2">warning</i>Conserve Electricity</h2>
           </mat-card-header>
           <mat-card-content>
-            <h2 class="p-4 alert-danger">You should not use electricity now. It's not environmentally friendly. The grid is currently operating with high CO2 emissions.</h2>
+            <h2 class="p-4 alert-danger">You should not use electricity now. It's not environmentally friendly. The grid is currently {{ carbons.percent | percent }} fossil fuel generation.</h2>
           </mat-card-content>
         </mat-card>
       </ng-template>
